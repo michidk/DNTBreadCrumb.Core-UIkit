@@ -16,7 +16,7 @@ Usage:
 ```xml
  <breadcrumb asp-homepage-title="Home"
              asp-homepage-url="@Url.Action("Index", "Home", values: new { area = "" })"
-             asp-homepage-glyphicon="glyphicon glyphicon-home"></breadcrumb>
+             asp-homepage-icon="heart"></breadcrumb>
 ```
 
 
