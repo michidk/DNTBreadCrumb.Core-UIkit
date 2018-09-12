@@ -2,12 +2,24 @@ DNTBreadCrumb.Core-UIkit
 =======
 `DNTBreadCrumb.Core` Creates custom bread crumb definitions, based on UIkit 3 features for ASP.NET Core applications.
 
-This is a fork from DNTBreadCrumb.Core with adds breadcrumbs for UIkit 3 instead of for Twitter Bootstrap.
+**This is a fork from [DNTBreadCrumb.Core](https://github.com/VahidN/DNTBreadCrumb.Core) with adds breadcrumbs for UIkit 3 instead of for Twitter Bootstrap.**
+
+
+Install via NuGet
+-----------------
+To install DNTBreadCrumb.Core-UIkit, run the following command in the Package Manager Console:
+
+```
+PM> Install-Package DNTBreadCrumb.Core-UIkit
+```
+
+You can also view the [package page](http://www.nuget.org/packages/DNTBreadCrumb.Core-UIKit/) on NuGet.
+
 
 
 Usage:
 -----------------
-- After installing the DNTBreadCrumb.Core package, add the following definition to the _ViewImports.cshtml file:
+- After installing the DNTBreadCrumb.Core-UIkit package, add the following definition to the _ViewImports.cshtml file:
 ```csharp
 @addTagHelper *, DNTBreadCrumb.Core-UIkit
 ```
