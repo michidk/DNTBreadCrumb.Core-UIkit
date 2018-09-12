@@ -46,6 +46,7 @@ namespace DNTBreadCrumb.Core
         /// </summary>
         [ViewContext, HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }
+
         /// <summary>
         ///
         /// </summary>
@@ -68,12 +69,6 @@ namespace DNTBreadCrumb.Core
             {
                 return;
             }
-
-            var currentFullUrl = Request.GetEncodedUrl();
-            string currentRouteUrl = getCurrentRouteUrl();
-            var isCurrentPageHomeUrl = HomePageUrl.Equals(currentFullUrl, StringComparison.OrdinalIgnoreCase) ||
-                                       HomePageUrl.Equals(currentRouteUrl, StringComparison.OrdinalIgnoreCase);
-
 
             output.TagName = "ul";
             output.TagMode = TagMode.StartTagAndEndTag;
@@ -118,19 +113,5 @@ namespace DNTBreadCrumb.Core
             }
         }
 
-        private string getCurrentRouteUrl()
-        {
-            var routeValues = ViewContext.ActionDescriptor.RouteValues;
-            if (routeValues.TryGetValue("action", out var action))
-            {
-                return new UrlHelper(ViewContext).Action(action);
-            }
-
-            if (routeValues.TryGetValue("page", out var page))
-            {
-                return page;
-            }
-            return string.Empty;
-        }
     }
 }
